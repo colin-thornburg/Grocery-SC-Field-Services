@@ -1,0 +1,6 @@
+ticket_id,customer_id,equipment_id,technician_id,service_date,service_type,time_on_site,parts_used,service_notes,status
+FS001,CUST001,EQ123,TECH01,2024-01-15,Maintenance,120,Filter-A;Belt-B,Regular maintenance completed,Completed
+FS002,CUST002,EQ456,TECH02,2024-01-15,Repair,180,Motor-X,Emergency repair - motor replacement,Completed
+FS003,CUST001,EQ789,TECH01,2024-01-16,Inspection,60,None,Annual inspection - passed,Completed
+FS004,CUST003,EQ234,TECH03,2024-01-16,Repair,90,Switch-Y,Equipment not cooling properly,In Progress
+FS005,CUST002,EQ456,TECH02,2024-01-17,Follow-up,45,None,Post-repair inspection,Completed

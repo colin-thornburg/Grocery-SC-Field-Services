@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: mart_daily_service_performance
+    config:
+      contract:
+        enforced: true
+    description: This model provides a daily summary of service performance metrics, focusing on technician activity and ticket handling efficiency. It aggregates data to offer insights into the number of active technicians, ticket handling, completion rates, and customer service reach.
+    access: public
+    columns:
+      - name: service_date
+        data_type: date
+        description: The date on which the service activities were recorded.
+        constraints:
+          - type: not_null
+      - name: active_technicians
+        data_type: int
+        description: The number of distinct technicians who were active on the service date.
+      - name: total_tickets
+        data_type: int
+        description: The total number of tickets handled on the service date.
+      - name: total_completed
+        data_type: int
+        description: The total number of tickets completed on the service date.
+      - name: completion_rate
+        data_type: numeric  # Adjusted to match the SQL definition
+        description: The percentage of tickets completed out of the total tickets handled on the service date.
+      - name: avg_ticket_duration
+        data_type: numeric  # Adjusted to match the SQL definition
+        description: The average time spent on handling each ticket on the service date, measured in minutes.
+      - name: tickets_requiring_parts
+        data_type: int
+        description: The total number of tickets that required parts on the service date.
+      - name: unique_customers_served
+        data_type: int
+        description: The number of distinct customers served on the service date.
